@@ -2,6 +2,7 @@ use std::{
     env,
     fs::{File, read_dir},
     io::Write,
+    path::PathBuf,
 };
 
 use image::ImageReader;
@@ -39,9 +40,9 @@ fn main() {
             output.push_str(&format!(
                 "const uint8_t {}[{}][{}] = {{{init}}};\n",
                 {
-                    let mut name = file.file_name().into_string().unwrap();
-                    name.truncate(name.len() - 4); // Remove ".png".
-                    name
+                    let mut name = file.path();
+                    name.set_extension(""); // Remove extension.
+                    name.file_name().unwrap().to_str().unwrap().to_owned() // Remove everything before the file name.
                 },
                 image.height(),
                 image.width()
