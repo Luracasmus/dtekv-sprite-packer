@@ -2,7 +2,6 @@ use std::{
     env,
     fs::{File, read_dir},
     io::Write,
-    path::PathBuf,
 };
 
 use image::ImageReader;
