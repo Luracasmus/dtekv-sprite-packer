@@ -2,7 +2,7 @@
 name = "dtekv_sprite_packer"
 version = "0.1.0"
 edition = "2024"
-description = "Script for packing sprites into a C file of arrays for the DTEK-V VGA output"
+description = "Tool for packing sprites into a C file of arrays for the DTEK-V VGA output"
 repository = "https://github.com/Luracasmus/dtekv-sprite-packer"
 license-file = "LICENSE.txt"
 
